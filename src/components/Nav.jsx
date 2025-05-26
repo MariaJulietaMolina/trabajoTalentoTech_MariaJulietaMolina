@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 function Nav() {
   return (
     <nav style={{ backgroundColor: "#333", color: "white", padding: "10px" }}>
@@ -11,22 +13,26 @@ function Nav() {
         }}
       >
         <li>
-          <a href="#" style={{ color: "white", textDecoration: "none" }}>
-            Inicio
-          </a>
+          <Link to="/Carrito" style={{ color: "white", textDecoration: "none" }}>
+            Carrito (Inicio)
+          </Link>
         </li>
         <li>
-          <a href="#" style={{ color: "white", textDecoration: "none" }}>
-            Acerca de
-          </a>
+          <Link
+            to="/usuario"
+            style={{ color: "white", textDecoration: "none" }}
+          >
+            Usuario (Acerca de)
+          </Link>
         </li>
         <li>
-          <a href="#" style={{ color: "white", textDecoration: "none" }}>
-            Contacto
-          </a>
+          <Link to="/menu" style={{ color: "white", textDecoration: "none" }}>
+            Menú (Contacto)
+          </Link>
         </li>
       </ul>
     </nav>
   );
 }
+
 export default Nav;

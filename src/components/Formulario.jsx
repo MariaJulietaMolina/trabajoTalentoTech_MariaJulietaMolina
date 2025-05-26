@@ -13,7 +13,7 @@ export default function Formulario() {
         type="text"
         value={nombre}
         onChange={(e) => setNombre(e.target.value)}
-        placeholder="Ingresa tu nombre"
+        placeholder="Este no va aca, pero shh"
       />
       <button type="submit">Enviar</button>
     </form>

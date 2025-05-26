@@ -23,7 +23,7 @@ export default function Productos() {
 
   return (
     <section>
-      <h2>Lista de Productos</h2>
+      <h2>Cosas que buscan gente</h2>
       {productos.map((producto) => (
         <article
           key={producto.id}
@@ -41,7 +41,11 @@ export default function Productos() {
             <strong>Descripción:</strong> {producto.descripcion}
           </p>
           <p>
-            <strong>Artículo:</strong> {producto.articulo}
+            <img
+              src={producto.articulo}
+              alt={producto.nombreArt}
+              style={{ width: "100%", maxWidth: "370px", borderRadius: "8px", height: "100%", maxHeight: "370px" }}
+            />
           </p>
         </article>
       ))}

@@ -9,7 +9,7 @@ function Header() {
         color: "white",
       }}
     >
-      <h1>Bienvenidos a mi App React</h1>
+      <h1>Hola tarolas</h1>
     </header>
   );
 }

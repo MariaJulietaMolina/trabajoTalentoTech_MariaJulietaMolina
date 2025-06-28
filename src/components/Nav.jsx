@@ -1,38 +1,23 @@
 import React from "react";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-function Nav() {
+function Navigation() {
   return (
-    <nav style={{ backgroundColor: "#333", color: "white", padding: "10px" }}>
-      <ul
-        style={{
-          listStyle: "none",
-          display: "flex",
-          justifyContent: "space-around",
-          margin: 0,
-        }}
-      >
-        <li>
-          <Link to="/Carrito" style={{ color: "white", textDecoration: "none" }}>
-            Carrito (Inicio)
-          </Link>
-        </li>
-        <li>
-          <Link
-            to="/usuario"
-            style={{ color: "white", textDecoration: "none" }}
-          >
-            Usuario (Acerca de)
-          </Link>
-        </li>
-        <li>
-          <Link to="/menu" style={{ color: "white", textDecoration: "none" }}>
-            Menú (Contacto)
-          </Link>
-        </li>
-      </ul>
-    </nav>
+    <Navbar bg="dark" variant="dark" expand="lg">
+      <Container>
+        <Navbar.Brand as={Link} to="/">Carrito (Inicio)</Navbar.Brand>
+        <Navbar.Toggle aria-controls="main-navbar" />
+        <Navbar.Collapse id="main-navbar">
+          <Nav className="me-auto">
+            <Nav.Link as={Link} to="/carrito">Carrito</Nav.Link>
+            <Nav.Link as={Link} to="/usuario">Usuario</Nav.Link>
+            <Nav.Link as={Link} to="/menu">Menu</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
-export default Nav;
+export default Navigation;
